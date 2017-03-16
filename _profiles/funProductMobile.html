@@ -1,0 +1,49 @@
+---
+#
+# The human-friendly name of the profile. Whenever you're asked for the profile
+# ID, it refers to the name of the profile file — in this case, "default".
+#
+name: "Fun Product - Mobile"
+
+#
+# The default profile will be the one shown when accessing the root URL of your
+# SpeedTracker site.
+# 
+default: false
+
+#
+# If you want tests to be repeated automatically, you can an interval (in hours)
+# with a minimum value of 12, as only two scheduled tests per day are allowed.
+# To disabled repeated tests, simply remove this property from the profile.
+#
+interval: 12
+
+#
+# WebPageTest test parameters
+#
+parameters:
+  connectivity: "Cable"
+  location: "Dulles:iPhone6"
+  runs: 1
+  url: "f5a678b10d31bc0311c6f59c81ed947f7330c2fed40a4d35bf524404e8c8865248a56dca2e6d6dfdcff67b9dcd9c7c3c7985873d7daeba8a0e878ea0c752c69ef824a4ad6c4ba7630bda"
+
+#
+# Performance budgets are defined with a metric id, a max/min allowed value
+# (in milliseconds), and one or multiple alerts — referenced by the ids defined
+# in the main config — to be triggered when a budget is overrun.
+#
+# For a list of metrics, check:
+#
+# https://github.com/speedtracker/speedtracker-api/blob/master/lib/SpeedTracker.js#L18-L37
+#
+#budgets:
+#  -
+#    metric: TTFB
+#    max: 600
+#    alerts: ["emailAlert", "slackAlert"]
+#  -
+#    metric: firstPaint
+#    max: 2000
+#    alerts: ["slackAlert"]
+---
+0
